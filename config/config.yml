@@ -1,0 +1,17 @@
+title: Wiki-Teste Esig Softwares
+
+
+theme:
+  primary: indigo
+  alt: blue-grey
+  viewSource: all 
+  footer: blue-grey
+  code:
+    dark: true
+    colorize: true
+
+uploads:
+  maxImageFileSize: 3
+  maxOtherFileSize: 100
+
+lang: pt
