@@ -165,7 +165,7 @@ Exemplo de acesso em uma VM local:
 
 
  *******   
- <h3>instalação utilizando Dockerc-compose:</h3>
+ <h3>instalação utilizando Docker-compose:</h3>
  
 caso deseje a intalação pode ser feita via docker compose para facilitar na hora de subir os containers e não ter que usar tantos parâmetros em um comando Docker. Os passos a seguir descrevem como subir os containers apartir do docker-compose, o cenário e organização dos diretórios é mesma esse methodo serve apenas para substituir a inicialização dos containers pelo modo tradicional do docker.
  
@@ -192,5 +192,83 @@ caso deseje a intalação pode ser feita via docker compose para facilitar na ho
   Exemplo de saída do comando:
   
  <img src="https://github.com/Gileno29/wiki-js-docker/blob/main/img/dockercomposeversion.jpg"/>
+ 
+ ******* 
+ <h3>configuração do docker-compose.yml:</h3>
+ 
+ na raiz do projeto crie um arquivo chamdo docker-compose.yml e faça as configurações do ambiente nele:
+ 
+    vi docker-compose.yml
+    
+ conteudo do docker-compose.yml:
+ 
+      version: "3"
+        services:
+          postgres-db:
+            image: postgres-wiki:latest
+
+            container_name: postgres-db
+
+            restart: unless-stopped
+
+            volumes:
+              - /home/centos/wiki-js-docker/db-setup/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+            environment:
+              - POSTGRES_USER=postgres
+              - POSTGRES_PASSWORD=1234
+
+            ports:
+              - "5353:5432"
+
+            networks: 
+              - wiki-network
+
+          wiki:
+            image: my-wiki-js:latest
+            depends_on:
+              - postgres-db
+
+            networks: 
+              - wiki-network
+
+            restart: unless-stopped
+
+            ports:
+              - "8080:3000"
+
+
+        networks:
+          wiki-network:
+            driver: bridge
+  
+ 
+ 
+No docker compose.yml nos declaramos quais serão as imagens que vamos utilizar para o container e também podemos utilizar algumas váriaveis de ambiente. No caso  do service wiki, não precisamos declarar as variáveis de ambiente do BD pois as mesmas já foram associadas no Dockerfile e estamos usando a build da imagem que criamos apartir do DockerFile.
+ 
+      version: "3"
+        services:
+          postgres-db:
+            image: postgres-wiki:latest
+
+            container_name: postgres-db
+
+            restart: unless-stopped
+
+            volumes:
+              - /home/centos/wiki-js-docker/db-setup/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+            environment:
+              - POSTGRES_USER=postgres
+              - POSTGRES_PASSWORD=1234
+
+            ports:
+              - "5353:5432"
+
+            networks: 
+              - wiki-network
+ 
+ 
+ nessa primeira parte do arquivo declamos a versão do docker-compose utilizada e o primeiro service(Container a ser contruido). Damos um nome a ele, informamos qual imagem vai ser usada para a contrução do mesmo e passamos o parametro restart:  ` restart: unless-stopped ` para que se o container parar o mesmo seja reiniciado. Construimos um volume apontando para o nosso script `init.sql` para que quando o banco inicie crie o BD da apalicação e seu usuário e senha, aqui deixo uma observação, mesmo com script apontado dentro do Dockerfile do BD como o composer gerenciando o banco burla esse script no `docker-entrypoint-initdb.d`, por a necessidade da criação desse volume, passamos o usuário e senha padrão que desejamos para o usuário padrão do BD (Use senha mais seguras em aplicações em produção), esatabelecemos o mapeamento entre aporta externa e do container e por último criamos atribuimos uma network ao container.
  
  
