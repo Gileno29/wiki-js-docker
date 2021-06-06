@@ -55,6 +55,13 @@ Todos os comandos aqui podem ser consultados  na <a href="https://docs.requarks.
       sudo yum install docker-ce docker-ce-cli containerd.io
     
  
+ *******
+<h2>configurando o Dockerfile:</h2>
+
+para esse projeto foi usado 2 docker files que estão em diretórios diferentes, eles foram criados com as configurações básicas do ambiente para subir o serviço
+sendo que o docker file da imagem do postgres contém um arquivo .sql que vai executar no entrypoint do serviço um script que cria o banco de dados da apilicação e o usuário e senha da aplicação.
+ 
+ 
 #Technologies & Tools
 <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"> <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"> <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
 
