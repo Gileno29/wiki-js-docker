@@ -84,13 +84,38 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
   
        FROM postgres:11-alpine
        COPY init.sql /docker-entrypoint-initdb.d/
-       LABEL CUSTON_BY="Gileno"
+       LABEL CUSTON_BY="seunome"
+       
+       
 
-   OBS: o arquivo Dockerfile deve ser escrito exatamente dessa forma.
   
-  <h4>Buildando a imagem do postgres apartir do Dockerfile:</h4>
-  
-      Dockert build -t postgres-wiki .
+   acesso o diretório do wiki-setup para criar o Dockerfile da do serviço:
+   
+       cd ../wiki-setup
+      
+       vi Dockerfile
+      
+   
+   conteudo do Dockerfile da wiki:
+   
+       FROM requarks/wiki:2
+       ENV WIKI_ADMIN_EMAIL=seuemail@dominio.com
+       ENV DB_HOST=postgres-db
+       ENV DB_TYPE=postgres
+       ENV DB_PORT=5432
+       ENV DB_USER=wikiuser
+       ENV DB_PASS=wiki1234
+       ENV DB_NAME=wikijs
+
+ 
+ 
+  OBS: o arquivo Dockerfile deve ser criado exatamente com essa nomenclatura.
+ 
+ *******
+ <h3>Buildando as imagens do apartir dos Dockerfiles:</h3>
+     
+        
+      Docker build -t postgres-wiki .
  
 # Technologies & Tools
 <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"> <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"> <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
