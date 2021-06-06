@@ -20,7 +20,8 @@ O Wiki.js é um software de documentação que segue em estilo wiki rodando no N
 Todos os comandos aqui podem ser consultados  na <a href="https://docs.requarks.io/">documentção oficial</a> do software
 
 <h4>Instalação Docker:</h4>
-```ruby
+```
+ruby
 require 'redcarpet'
 markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
