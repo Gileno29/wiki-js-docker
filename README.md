@@ -171,7 +171,7 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
    
    <img src="https://github.com/Gileno29/wiki-js-docker/blob/main/img/servicoup.jpg"/>
    
-  A serviço pode ser acessado no nesse caso através do ip da máquina virtual mais a porta que deinimos na hora da criação do container, no caso 8080. Para uma máquina em uma plataforma de cloud como a azure, por exemplo, pode ser acessado atráves do ip da intancia que a azure fornece ou atráves do serviço de dns que os mesmos também possuem.
+  O serviço pode ser acessado, nesse caso, através do ip da máquina virtual mais a porta que definimos na hora da criação do container, no caso, 8080. Para uma máquina em uma plataforma de cloud como a azure, por exemplo, pode ser acessado atráves do ip da instância que a azure fornece ou atráves do serviço de dns que os mesmos também possuem.
 
 Exemplo de acesso em uma VM local:
 <img src="https://github.com/Gileno29/wiki-js-docker/blob/main/img/pagina_wiki_js.jpg"/>
