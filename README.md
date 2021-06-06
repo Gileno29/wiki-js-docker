@@ -257,7 +257,7 @@ caso deseje a intalação pode ser feita via docker-compose para facilitar na ho
   
  
  
-No docker compose.yml são declaradas as imagens que vão utilizas para o container e também pode ser criado algumas váriaveis de ambiente. No caso  do service wiki, não precisa ser declarado as variáveis do BD pois as mesmas já foram associadas no Dockerfile e esta sendo usado a build da imagem criada apartir do DockerFile.
+No docker compose.yml são declaradas as imagens que vão utilizas para o container e também pode ser criado  váriaveis de ambiente, no caso  do service wiki, não precisa declarar as variáveis do BD pois as mesmas já foram associadas no Dockerfile e está sendo usado a build da imagem criada apartir do Dockerfile.
  
       version: "3"
         services:
@@ -282,7 +282,7 @@ No docker compose.yml são declaradas as imagens que vão utilizas para o contai
               - wiki-network
  
  
- nessa primeira parte do arquivo declamos a versão do docker-compose utilizada e o primeiro service(Container a ser contruido). Damos um nome a ele, informamos qual imagem vai ser usada para a contrução do mesmo e passamos o parametro restart:  ` restart: unless-stopped ` para que se o container parar o mesmo seja reiniciado. Construimos um volume apontando para o nosso script `init.sql` para que quando o banco inicie crie o BD da apalicação e seu usuário e senha, aqui deixo uma observação, mesmo com script apontado dentro do Dockerfile do BD como o composer gerenciando o banco burla esse script no `docker-entrypoint-initdb.d`, por a necessidade da criação desse volume, passamos o usuário e senha padrão que desejamos para o usuário padrão do BD (Use senha mais seguras em aplicações em produção), esatabelecemos o mapeamento entre aporta externa e do container e por último criamos atribuimos uma network ao container.
+ nessa primeira parte do arquivo foi declarado a versão do docker-compose utilizada e o primeiro service(Container a ser contruido), foi dado um  nome a ele, foi informado qual imagem vai ser usada para a contrução docontainer e foi passado o parâmetro ` restart: unless-stopped ` para que, se o container parar, o mesmo seja reiniciado. Construimos um volume apontando para o nosso script `init.sql` para que quando o banco inicie crie o BD da apalicação e seu usuário e senha, aqui deixo uma observação, mesmo com script apontado dentro do Dockerfile do BD como o composer gerenciando o banco burla esse script no `docker-entrypoint-initdb.d`, por a necessidade da criação desse volume, passamos o usuário e senha padrão que desejamos para o usuário padrão do BD (Use senha mais seguras em aplicações em produção), esatabelecemos o mapeamento entre aporta externa e do container e por último criamos atribuimos uma network ao container.
  
  
 
