@@ -3,7 +3,11 @@
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--31kz0eFU--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/qrfrajefv1o01zv8nfju.png"/> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/> <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node-dot-js&logoColor=white"/> 
 
 
+*******
 <h4>Sobre:</h4>
+
+*******
+
 O Wiki.js é um software de documentação que segue em estilo wiki rodando no Node.js e escrito em JavaScript.
 
 
@@ -13,6 +17,7 @@ O Wiki.js é um software de documentação que segue em estilo wiki rodando no N
 <h3>Requerimentos:</h3>
 
 *******
+
 <ul>
   <li>Sistema operacional Linux. No projeto foi usado um ambiente controlado, uma VM criada no Virtual Box e usando o SO <a href="https://docs.docker.com/compose/install/">CentOS 7.</a></li>
   <li>Git</li>
