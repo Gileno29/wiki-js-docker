@@ -57,7 +57,7 @@ Todos os comandos aqui podem ser consultados  na <a href="https://docs.requarks.
     
  
  *******
-<h2>configurando o Dockerfile:</h2>
+<h2>Configurando o Dockerfile:</h2>
 
 para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, eles foram criados com as configurações básicas para buildar as imagens que serão executadas no ambiente para subir o serviço, sendo que o Dockerfile da imagem do postgres contém um arquivo .sql que vai executar no entrypoint do serviço um script que cria o banco de dados da apilicação e o usuário e senha.
 
@@ -69,7 +69,7 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
       
        vi init.sql
        
-   conteudo do arquivo init.sql:
+   Conteudo do arquivo init.sql:
        
        CREATE USER wikiuser WITH password 'wiki1234';
 
@@ -77,11 +77,11 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
 
        CREATE DATABASE wikijs WITH OWNER wikiuser;
        
-   criando o Dockerfile:
+   Criando o Dockerfile:
   
        vi init.sql
        
-   conteudo do arquivo Dockerfile:
+   Conteudo do arquivo Dockerfile:
   
        FROM postgres:11-alpine
        COPY init.sql /docker-entrypoint-initdb.d/
@@ -90,14 +90,14 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
        
 
   
-   acesso o diretório do wiki-setup para criar o Dockerfile da do serviço:
+   Acesso o diretório do wiki-setup para criar o Dockerfile da do serviço:
    
        cd ../wiki-setup
       
        vi Dockerfile
       
    
-   conteudo do Dockerfile da wiki:
+   Conteudo do Dockerfile da wiki:
    
        FROM requarks/wiki:2
        ENV WIKI_ADMIN_EMAIL=seuemail@dominio.com
@@ -123,11 +123,11 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
       cd /wiki-setup
       Docker build -t my-wiki-js .
     
-   você pode checar se as imagens foram criadas com o seguinte comando:
+   Você pode checar se as imagens foram criadas com o seguinte comando:
      
       docker image ls -a
       
-   exemplo de saida do comando:
+   Exemplo de saida do comando:
     <img src="https://github.com/Gileno29/wiki-js-docker/blob/main/img/dockerimagels.jpg"/>
    
    
