@@ -180,7 +180,7 @@ Exemplo de acesso em uma VM local:
  *******   
  <h3>instalação utilizando Docker-compose:</h3>
  
-caso deseje a intalação pode ser feita via docker compose para facilitar na hora de subir os containers e não ter que usar tantos parâmetros em um comando Docker. Os passos a seguir descrevem como subir os containers apartir do docker-compose, o cenário e organização dos diretórios é mesma esse methodo serve apenas para substituir a inicialização dos containers pelo modo tradicional do docker.
+caso deseje a intalação pode ser feita via docker-compose para facilitar na hora de subir os containers e não ter que usar tantos parâmetros em um comando Docker. Os passos a seguir descrevem como subir os containers apartir do docker-compose, o cenário e organização dos diretórios é mesma esse método serve apenas para substituir a inicialização dos containers pelo modo tradicional do docker.
  
  
  *******
