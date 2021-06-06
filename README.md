@@ -10,7 +10,7 @@ O Wiki.js é um software de documentação que segue em estilo wiki rodando no N
 <div id='requerimentos'/>
 
 *******
-<h4>Requerimentos:</h4>
+<h2>Requerimentos:</h2>
 
 *******
 <ul>
