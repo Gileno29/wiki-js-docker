@@ -60,25 +60,39 @@ Todos os comandos aqui podem ser consultados  na <a href="https://docs.requarks.
 
 para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, eles foram criados com as configurações básicas para buildar as imagens que serão executadas no ambiente para subir o serviço, sendo que o Dockerfile da imagem do postgres contém um arquivo .sql que vai executar no entrypoint do serviço um script que cria o banco de dados da apilicação e o usuário e senha.
 
-  #Crie  a estrutura de diretórios:
+  # Crie  a estrutura de diretórios:
             
        mkdir bd-setup && mkdir wiki-setup
     
-  #Dentro do bd-setup crie o arqui init.sql e o Dockerfile:
+  # Dentro do bd-setup crie o arqui init.sql e o Dockerfile:
       
        vi init.sql
        
-  #conteudo do arquivo init.sql:
+  # conteudo do arquivo init.sql:
        
        CREATE USER wikiuser WITH password 'wiki1234';
 
        ALTER USER wikiuser WITH SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN REPLICATION;
 
        CREATE DATABASE wikijs WITH OWNER wikiuser;
-
        
+  # criando o Dockerfile:
+  
+       vi init.sql
+       
+  # conteudo do arquivo Dockerfile:
+  
+       FROM postgres:11-alpine
+       COPY init.sql /docker-entrypoint-initdb.d/
+       LABEL CUSTON_BY="Gileno"
+
+  # OBS: o arquivo Dockerfile deve ser escrito exatamente dessa forma.
+  
+  <h4>Buildando a imagem do postgres apartir do Dockerfile:</h4>
+  
+      Dockert build -t postgres-wiki .
  
-#Technologies & Tools
+# Technologies & Tools
 <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"> <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"> <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
 
 <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white">
