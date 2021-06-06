@@ -150,6 +150,7 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
    
    <img src="https://github.com/Gileno29/wiki-js-docker/blob/main/img/dockercontainerls.jpg"/>
    
+   <a name=“verificar”><a/>
    Ao final do processo você validar se a aplicação funcinou pelos logs:
       
         docker logs -f my-wiki-js
@@ -272,3 +273,27 @@ No docker compose.yml nos declaramos quais serão as imagens que vamos utilizar 
  nessa primeira parte do arquivo declamos a versão do docker-compose utilizada e o primeiro service(Container a ser contruido). Damos um nome a ele, informamos qual imagem vai ser usada para a contrução do mesmo e passamos o parametro restart:  ` restart: unless-stopped ` para que se o container parar o mesmo seja reiniciado. Construimos um volume apontando para o nosso script `init.sql` para que quando o banco inicie crie o BD da apalicação e seu usuário e senha, aqui deixo uma observação, mesmo com script apontado dentro do Dockerfile do BD como o composer gerenciando o banco burla esse script no `docker-entrypoint-initdb.d`, por a necessidade da criação desse volume, passamos o usuário e senha padrão que desejamos para o usuário padrão do BD (Use senha mais seguras em aplicações em produção), esatabelecemos o mapeamento entre aporta externa e do container e por último criamos atribuimos uma network ao container.
  
  
+
+       wiki:
+            image: my-wiki-js:latest
+            depends_on:
+              - postgres-db
+
+            networks: 
+              - wiki-network
+
+            restart: unless-stopped
+
+            ports:
+              - "8080:3000"
+
+
+        networks:
+          wiki-network:
+            driver: bridge
+  
+  Nessa útima parte do `docker-compose.yml` criamos o segundo service com nome de `wiki` infomamos que ele vai ser dependente de um outro serviço que precisa está funcional para ele poder iniciar, no caso o banco de dados, especificamos isso com o parâmentro `depends_on:- postgres-db` também definimos o parâmetro `restart: unless-stopped` e colocamos o serviço na mesma network que o outro fazemos o mapeamento de portas em  `ports:- "8080:3000`, por fim criamos a network que atribuimos a ambos os containers em ` networks: wiki-network: driver: bridge`.
+  
+  apos o arquivo está devidamente criado, podemos executar o comando `docker-compose up` e os nossos containers estarão criados.
+
+para checar podemos usar os comando da [seção acima](#verificar) 
