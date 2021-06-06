@@ -31,7 +31,7 @@ Todos os comandos aqui podem ser consultados  na <a href="https://docs.requarks.
                   docker-logrotate \
                   docker-engine
 
-  Após remover qualquer versão antiga do Docker será nessário a instalação de alguns utilitários para adicionar o soucer-list do Docker ao Centos e em seguida 
+  Após remover qualquer versão antiga do Docker será nessário a instalação de alguns utilitários para adicionar o source-list do Docker ao Centos e em seguida 
   a adicionar o source-list:
   
      sudo yum install -y yum-utils
