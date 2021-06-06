@@ -13,7 +13,7 @@ O Wiki.js é um software de documentação que segue em estilo wiki rodando no N
 <div id='requerimentos'/>
 
 *******
-<h3>Requerimentos:</h3>
+<h3>Requisitos:</h3>
 
 
 <ul>
@@ -23,9 +23,17 @@ O Wiki.js é um software de documentação que segue em estilo wiki rodando no N
 </ul>
 
 
+*******
+<h3>Documentação:</h3>
+  <li>[Instalação Docker](#docker)</li>
+  <li>[Configuração Dockerfile](#dockerfile)</a></li>
+  <li>[Configuração Docker Composer](#composer)</li>
+  <li><a name="debug">[Trouble Shooting](#debug)</a><li>
+
+
 Todos os comandos aqui podem ser consultados  na <a href="https://docs.requarks.io/">documentção oficial</a> do software
 
-
+<a name="docker"></a>
 *******
 <h2>Instalação Docker Centos 7 via respositório:</h2>
   Caso possua uma instalação antiga, remova:
@@ -55,7 +63,7 @@ Todos os comandos aqui podem ser consultados  na <a href="https://docs.requarks.
   
       sudo yum install docker-ce docker-ce-cli containerd.io
     
- 
+ <a name="dockerfile"></a>
  *******
 <h2>Configurando o Dockerfile:</h2>
 
@@ -164,7 +172,7 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
 Exemplo de acesso em uma VM local:
 <img src="https://github.com/Gileno29/wiki-js-docker/blob/main/img/pagina_wiki_js.jpg"/>
 
-
+<a name="composer"></a>
  *******   
  <h3>instalação utilizando Docker-compose:</h3>
  
