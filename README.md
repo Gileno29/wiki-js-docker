@@ -4,9 +4,8 @@
 
 
 *******
-<h4>Sobre:</h4>
+<h3>Sobre:</h3>
 
-*******
 
 O Wiki.js é um software de documentação que segue em estilo wiki rodando no Node.js e escrito em JavaScript.
 
