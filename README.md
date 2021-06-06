@@ -213,7 +213,7 @@ caso deseje a intalação pode ser feita via docker-compose para facilitar na ho
  
     vi docker-compose.yml
     
- conteudo do docker-compose.yml:
+ conteúdo do docker-compose.yml:
  
       version: "3"
         services:
