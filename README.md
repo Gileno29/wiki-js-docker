@@ -292,7 +292,7 @@ No docker compose.yml nos declaramos quais serão as imagens que vamos utilizar 
           wiki-network:
             driver: bridge
   
-  Nessa útima parte do `docker-compose.yml` criamos o segundo service com nome de `wiki` infomamos que ele vai ser dependente de um outro serviço que precisa está funcional para ele poder iniciar, no caso o banco de dados, especificamos isso com o parâmentro `depends_on:- postgres-db` também definimos o parâmetro `restart: unless-stopped` e colocamos o serviço na mesma network que o outro fazemos o mapeamento de portas em  `ports:- "8080:3000`, por fim criamos a network que atribuimos a ambos os containers em ` networks: wiki-network: driver: bridge`.
+  Nessa útima parte do `docker-compose.yml` criamos o segundo service com nome de `wiki` infomamos que ele vai ser dependente de um outro serviço que precisa está funcional para ele poder iniciar, no caso o banco de dados, especificamos isso com o parâmentro `depends_on:- postgres-db` também definimos o parâmetro `restart: unless-stopped` e colocamos o serviço na mesma network que o outro fazemos o mapeamento de portas em  `ports:- "8080:3000"`, por fim criamos a network que atribuimos a ambos os containers em ` networks: wiki-network: driver: bridge`.
   
   apos o arquivo está devidamente criado, podemos executar o comando `docker-compose up` e os nossos containers estarão criados.
 
