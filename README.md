@@ -209,7 +209,7 @@ caso deseje a intalação pode ser feita via docker-compose para facilitar na ho
  ******* 
  <h3>configuração do docker-compose.yml:</h3>
  
- na raiz do projeto crie um arquivo chamdo docker-compose.yml e faça as configurações do ambiente nele:
+ na raiz do projeto crie um arquivo chamado docker-compose.yml e faça as configurações do ambiente nele:
  
     vi docker-compose.yml
     
