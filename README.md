@@ -150,7 +150,7 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
    
    <img src="https://github.com/Gileno29/wiki-js-docker/blob/main/img/dockercontainerls.jpg"/>
    
-   ##<a name=“verificar”><a/>
+   <a name="verificar"><a/>
    Ao final do processo você validar se a aplicação funcinou pelos logs:
       
         docker logs -f my-wiki-js
