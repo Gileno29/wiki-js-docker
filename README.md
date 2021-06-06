@@ -257,7 +257,7 @@ caso deseje a intalação pode ser feita via docker-compose para facilitar na ho
   
  
  
-No docker compose.yml nos declaramos quais serão as imagens que vamos utilizar para o container e também podemos utilizar algumas váriaveis de ambiente. No caso  do service wiki, não precisamos declarar as variáveis de ambiente do BD pois as mesmas já foram associadas no Dockerfile e estamos usando a build da imagem que criamos apartir do DockerFile.
+No docker compose.yml são declaradas as imagens que vão utilizas para o container e também pode ser criado algumas váriaveis de ambiente. No caso  do service wiki, não precisa ser declarado as variáveis do BD pois as mesmas já foram associadas no Dockerfile e esta sendo usado a build da imagem criada apartir do DockerFile.
  
       version: "3"
         services:
