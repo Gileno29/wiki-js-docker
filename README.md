@@ -21,7 +21,6 @@ Todos os comandos aqui podem ser consultados  na <a href="https://docs.requarks.
 
 <h4>Instalação Docker:</h4>
 ```
-ruby
 require 'redcarpet'
 markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
