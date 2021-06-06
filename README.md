@@ -81,7 +81,7 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
       
        vi init.sql
        
-   Conteudo do arquivo init.sql:
+   Conteúdo do arquivo init.sql:
        
        CREATE USER wikiuser WITH password 'wiki1234';
 
@@ -93,7 +93,7 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
   
        vi init.sql
        
-   Conteudo do arquivo Dockerfile:
+   Conteúdo do arquivo Dockerfile:
   
        FROM postgres:11-alpine
        COPY init.sql /docker-entrypoint-initdb.d/
@@ -102,14 +102,14 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
        
 
   
-   Acesso o diretório do wiki-setup para criar o Dockerfile da do serviço:
+   Acesse o diretório do wiki-setup para criar o Dockerfile da do serviço:
    
        cd ../wiki-setup
       
        vi Dockerfile
       
    
-   Conteudo do Dockerfile da wiki:
+   Conteúdo do Dockerfile da wiki:
    
        FROM requarks/wiki:2
        ENV WIKI_ADMIN_EMAIL=seuemail@dominio.com
@@ -282,7 +282,7 @@ No docker compose.yml são declaradas as imagens que vão utilizas para o contai
               - wiki-network
  
  
- nessa primeira parte do arquivo foi declarado a versão do docker-compose utilizada e o primeiro service(Container a ser contruido), foi dado um  nome a ele, foi informado qual imagem vai ser usada para a contrução docontainer e foi passado o parâmetro ` restart: unless-stopped ` para que, se o container parar, o mesmo seja reiniciado. Construimos um volume apontando para o nosso script `init.sql` para que quando o banco inicie crie o BD da apalicação e seu usuário e senha, aqui deixo uma observação, mesmo com script apontado dentro do Dockerfile do BD como o composer gerenciando o banco burla esse script no `docker-entrypoint-initdb.d`, por a necessidade da criação desse volume, passamos o usuário e senha padrão que desejamos para o usuário padrão do BD (Use senha mais seguras em aplicações em produção), esatabelecemos o mapeamento entre aporta externa e do container e por último criamos atribuimos uma network ao container.
+ nessa primeira parte do arquivo foi declarado a versão do docker-compose utilizada e o primeiro service(Container a ser contruido), foi dado um  nome a ele, foi informado qual imagem vai ser usada para a contrução docontainer e foi passado o parâmetro ` restart: unless-stopped ` para que, se o container parar, o mesmo seja reiniciado. Construimos um volume apontando para o nosso script `init.sql` para que quando o banco inicie crie o BD da aplicação e seu usuário e senha, aqui deixo uma observação, mesmo com script apontado dentro do Dockerfile do BD como o composer gerenciando o banco burla esse script no `docker-entrypoint-initdb.d`, por a necessidade da criação desse volume, passamos o usuário e senha padrão que desejamos para o usuário padrão do BD (Use senha mais seguras em aplicações em produção), estabelecemos o mapeamento entre aporta externa e do container e por último criamos atribuimos uma network ao container.
  
  
 
@@ -306,6 +306,6 @@ No docker compose.yml são declaradas as imagens que vão utilizas para o contai
   
   Nessa útima parte do `docker-compose.yml` criamos o segundo service com nome de `wiki` infomamos que ele vai ser dependente de um outro serviço que precisa está funcional para ele poder iniciar, no caso o banco de dados, especificamos isso com o parâmentro `depends_on:- postgres-db` também definimos o parâmetro `restart: unless-stopped` e colocamos o serviço na mesma network que o outro fazemos o mapeamento de portas em  `ports:- "8080:3000"`, por fim criamos a network que atribuimos a ambos os containers em ` networks: wiki-network: driver: bridge`.
   
-  apos o arquivo está devidamente criado, podemos executar o comando `docker-compose up` e os nossos containers estarão criados.
+  após o arquivo está devidamente criado, podemos executar o comando `docker-compose up` e os nossos containers estarão criados.
 
 para checar podemos usar os comando da seção [acima](#verificar) 
