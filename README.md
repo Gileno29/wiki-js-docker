@@ -126,6 +126,11 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
      
       docker image ls -a
       
+   exemplo de saida do comando:
+    <img src="https://github.com/Gileno29/wiki-js-docker/blob/main/img/dockerimagels.jpg"/>
+   
+   
+      
  *******    
  <h3>Criando os containers Docker:</h3>
  
@@ -134,7 +139,24 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
       docker run -d -p 5432:5432 --name postgres-db -p 5432:5432 -e POSTGRES_PASSWORD=123456  postgres-wiki:latest
       
       docker run -d -p 8080:3000  --link postgres-db:db --name wiki --restart unless-stopped  my-wiki-js:latest
-    
+   
+   pode ser conferido se os containers estão criados com o comando:
+      
+      docker container ls -a 
+      
+      
+   Exemplo de saída do comando:
+   
+   <img src="https://github.com/Gileno29/wiki-js-docker/blob/main/img/dockercontainerls.jpg"/>
+   
+   Ao final do processo você validar se a aplicação funcinou pelos logs:
+      
+        docker logs -f my-wiki-js
+       
+   A saída do log com a aplicação funcionando será a seguinte:
+   
+   <img src="https://github.com/Gileno29/wiki-js-docker/blob/main/img/servicoup.jpg"/>
+   
  
  
  
