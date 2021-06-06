@@ -25,10 +25,9 @@ O Wiki.js é um software de documentação que segue em estilo wiki rodando no N
 
 *******
 <h3>Documentação:</h3>
-  <li>[Instalação Docker](#docker)</li>
-  <li>[Configuração Dockerfile](#dockerfile)</a></li>
-  <li>[Configuração Docker Composer](#composer)</li>
-  <li><a name="debug">[Trouble Shooting](#debug)</a><li>
+ [Instalação Docker](#docker)
+ [Configuração Dockerfile](#dockerfile)
+ [Configuração Docker Composer](#composer)
 
 
 Todos os comandos aqui podem ser consultados  na <a href="https://docs.requarks.io/">documentção oficial</a> do software
