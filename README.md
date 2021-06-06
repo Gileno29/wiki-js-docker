@@ -296,4 +296,4 @@ No docker compose.yml nos declaramos quais serão as imagens que vamos utilizar 
   
   apos o arquivo está devidamente criado, podemos executar o comando `docker-compose up` e os nossos containers estarão criados.
 
-para checar podemos usar os comando da [seção acima](#verificar) 
+para checar podemos usar os comando da seção [acima](#verificar) 
