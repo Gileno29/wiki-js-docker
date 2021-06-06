@@ -10,11 +10,8 @@ O Wiki.js é um software de documentação que segue em estilo wiki rodando no N
 
 <ul>
   <li>Sistema operacional Linux. No projeto foi usado um ambiente controlado, uma VM criada no Virtual Box e usando o SO CentOS 7.</a></li>
-  <li>Git.</li>
+  <li>Git</li>
   <li>Deve possuir o <a href="https://docs.docker.com/engine/install/centos/">Docker</a> e também o Docker-compose para a segunda parte do projeto
-  <li>Importe-o para seu Eclipse como projeto Maven.</li>
-  <li>Faça download do Servidor Tomcat 9.0 <a href="https://tomcat.apache.org/download-90.cgi">aqui</a> e importe o servidor para sua IDE.</li>
-  <li>Rode a aplicação no servidor e a acesse em http://localhost:8080/projeto/cliente.jsf</li>
 </ul>
 
 
