@@ -163,5 +163,34 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
 Exemplo de acesso em uma VM local:
 <img src="https://github.com/Gileno29/wiki-js-docker/blob/main/img/pagina_wiki_js.jpg"/>
 
+
+ *******   
+ <h3>instalação utilizando Dockerc-compose:</h3>
+ 
+caso deseje a intalação pode ser feita via docker compose para facilitar na hora de subir os containers e não ter que usar tantos parâmetros em um comando Docker. Os passos a seguir descrevem como subir os containers apartir do docker-compose, o cenário e organização dos diretórios é mesma esse methodo serve apenas para substituir a inicialização dos containers pelo modo tradicional do docker.
+ 
+ 
+ *******
+ <h3>Instalação:</h3>
+ 
+ execute o curl para dowload da versão mais recente do docker-compose:
+ 
+    sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    
+ dê permissão de execução ao arquivo:
+    
+    sudo chmod +x /usr/local/bin/docker-compose
+
+  crie um link simbolíco para que o docker-copose fique vísivel na variável PATH (opcional, porém recomendo):
+  
+     sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+     
+  agora pode checar se o compose está instalado com o comando:
+    
+      docker-compose --version
+      
+  Exemplo de saída do comando:
+  
+ <img src="https://github.com/Gileno29/wiki-js-docker/blob/main/img/dockercomposeversion.jpg"/>
  
  
