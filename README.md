@@ -60,15 +60,15 @@ Todos os comandos aqui podem ser consultados  na <a href="https://docs.requarks.
 
 para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, eles foram criados com as configurações básicas para buildar as imagens que serão executadas no ambiente para subir o serviço, sendo que o Dockerfile da imagem do postgres contém um arquivo .sql que vai executar no entrypoint do serviço um script que cria o banco de dados da apilicação e o usuário e senha.
 
-  # Crie  a estrutura de diretórios:
+   Crie  a estrutura de diretórios:
             
        mkdir bd-setup && mkdir wiki-setup
     
-  # Dentro do bd-setup crie o arqui init.sql e o Dockerfile:
+   Dentro do bd-setup crie o arqui init.sql e o Dockerfile:
       
        vi init.sql
        
-  # conteudo do arquivo init.sql:
+   conteudo do arquivo init.sql:
        
        CREATE USER wikiuser WITH password 'wiki1234';
 
@@ -76,17 +76,17 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
 
        CREATE DATABASE wikijs WITH OWNER wikiuser;
        
-  # criando o Dockerfile:
+   criando o Dockerfile:
   
        vi init.sql
        
-  # conteudo do arquivo Dockerfile:
+   conteudo do arquivo Dockerfile:
   
        FROM postgres:11-alpine
        COPY init.sql /docker-entrypoint-initdb.d/
        LABEL CUSTON_BY="Gileno"
 
-  # OBS: o arquivo Dockerfile deve ser escrito exatamente dessa forma.
+   OBS: o arquivo Dockerfile deve ser escrito exatamente dessa forma.
   
   <h4>Buildando a imagem do postgres apartir do Dockerfile:</h4>
   
