@@ -1,6 +1,12 @@
 # wiki-js-docker
 
-<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--31kz0eFU--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/qrfrajefv1o01zv8nfju.png"/> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"> <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--31kz0eFU--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/qrfrajefv1o01zv8nfju.png"/> 
+
+O Wiki.js é um software de documentação que segue em estilo wiki rodando no Node.js e escrito em JavaScript.
+
+
+
+<img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"> <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
 
 
 
