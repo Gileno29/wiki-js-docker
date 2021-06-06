@@ -2,7 +2,7 @@
 # Gileno
 Hi, i am Gileno  currently completing graduation in systems analysis and development, working with Network Analyst, Lover of Linux and Open Source distributions, Python Developer and always seeking to update himself.
 
-<img src="https://drive.google.com/drive/u/0/folders/1ll1Fmdt8RDxM-3f0RI216s2VOMiCJVx9"/> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"> <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
+<img src="https://drive.google.com/file/d/1g2BCLp4Iq9s2mpMx7aUknk5aaef2hL9k/view?usp=sharing"/> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"> <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
 
 
 
