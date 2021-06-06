@@ -40,6 +40,11 @@ Todos os comandos aqui podem ser consultados  na <a href="https://docs.requarks.
            --add-repo \
            https://download.docker.com/linux/centos/docker-ce.repo
     
+   
+  
+  Agora basta apenas fazer a instalação:
+  
+      sudo yum install docker-ce docker-ce-cli containerd.io
     
  
 #Technologies & Tools
