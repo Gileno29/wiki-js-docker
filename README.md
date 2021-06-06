@@ -173,7 +173,7 @@ caso deseje a intalação pode ser feita via docker compose para facilitar na ho
  *******
  <h3>Instalação:</h3>
  
- execute o curl para dowload da versão mais recente do docker-compose:
+ execute o curl para download da versão mais recente do docker-compose:
  
     sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     
