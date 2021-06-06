@@ -124,7 +124,7 @@ para esse projeto foi usado 2 Dockerfiles que estão em diretórios diferentes, 
   OBS: o arquivo Dockerfile deve ser criado exatamente com essa nomenclatura.
  
  *******
- <h3>Buildando as imagens do apartir dos Dockerfiles:</h3>
+ <h3>Build das imagens  a partir dos Dockerfiles:</h3>
      
    acesse os respectivos diretórios para buildar as imagens:
         
