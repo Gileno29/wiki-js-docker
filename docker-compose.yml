@@ -1,39 +1,37 @@
 version: "3"
 services:
+  postgres-db:
+    image: postgres-wiki:latest
 
-  db:
-    image: gileno-postgres-11
-    container_name: db
-    logging:
-      driver: "none"
+    container_name: postgres-db
+  
     restart: unless-stopped
-    volumes:
-      - db-data:/var/lib/postgresql/data
 
+    volumes:
+      - /home/centos/wiki-js-docker/db-setup/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+
+    ports:
+      - "5353:5432"
+  
     networks: 
       - wiki-network
 
   wiki:
     image: my-wiki-js:latest
     depends_on:
-      - db
+      - postgres-db
 
     networks: 
       - wiki-network
-      
-    environment:
-      DB_TYPE: postgres
-      DB_HOST: db
-      DB_PORT: 5432
-      DB_USER: wikiuser
-      DB_PASS: wikipass
-      DB_NAME: db
-    restart: unless-stopped
-    ports:
-      - "80:3000"
 
-volumes:
-  db-data:
+    restart: unless-stopped
+
+    ports:
+      - "8080:3000"
 
 
 networks:
