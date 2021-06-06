@@ -25,7 +25,9 @@ O Wiki.js é um software de documentação que segue em estilo wiki rodando no N
 
 Todos os comandos aqui podem ser consultados  na <a href="https://docs.requarks.io/">documentção oficial</a> do software
 
-<h4>Instalação Docker Centos 7 via respositório:</h4>
+
+*******
+<h2>Instalação Docker Centos 7 via respositório:</h2>
   Caso possua uma instalação antiga, remova:
   
     sudo yum remove docker \
