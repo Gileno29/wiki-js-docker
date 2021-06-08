@@ -7,8 +7,8 @@
 <h3>Sobre:</h3>
 
 
-O Wiki.js é um software de documentação que segue em estilo wiki rodando no Node.js e escrito em JavaScript.
-Esse projeto pode ser feito o download e depois criado as builds apartir dos arquivos, isso está na sesção de [Configuração Dockerfile](#dockerfile) ou seguido todos os passos e feito manualmente todo o processo.
+O Wiki.js é um software de documentação que segue o estilo wiki rodando no Node.js e escrito em JavaScript.
+Você pode optar por fazer o download dos arquivos e buildar a imagens apartir dos arquivos, isso está na sesção de [Configuração Dockerfile](#dockerfile) ou seguido todos os passos e fazer manualmente todo o processo.
 
 
 <div id='requerimentos'/>
