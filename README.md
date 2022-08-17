@@ -1,5 +1,5 @@
 # wiki-js-docker
-#PROJETO PARA PROVISIONAMENTO DE UM SISTEMA DE DOCUMENTAÇÃO EM CLOUD
+# PROJETO PARA PROVISIONAMENTO DE UM SISTEMA DE DOCUMENTAÇÃO EM CLOUD
 
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--31kz0eFU--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/qrfrajefv1o01zv8nfju.png"/> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/> <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node-dot-js&logoColor=white"/> 
 
